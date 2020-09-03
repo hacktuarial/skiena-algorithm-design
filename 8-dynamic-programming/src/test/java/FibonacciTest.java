@@ -25,6 +25,11 @@ class FibonacciTest {
         assertEquals(102334155, fib.calculate_memoized(40));
     }
 
+    @Test
+    void TestLargeUltimate() {
+        assertEquals(102334155, fib.calculate_ultimate(40));
+    }
+
 
 
 
