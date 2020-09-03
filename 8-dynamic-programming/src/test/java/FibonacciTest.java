@@ -8,16 +8,21 @@ class FibonacciTest {
 
     @Test
     void TestFirstFew() {
-        assertEquals(fib.number(0), 0);
-        assertEquals(fib.number(1), 1);
-        assertEquals(fib.number(2), 1);
-        assertEquals(fib.number(3), 2);
-        assertEquals(fib.number(4), 3);
+        assertEquals(0, fib.calculate_recursive(0));
+        assertEquals(1, fib.calculate_recursive(1));
+        assertEquals(1, fib.calculate_recursive(2));
+        assertEquals(2, fib.calculate_recursive(3));
+        assertEquals(3, fib.calculate_recursive(4));
     }
 
     @Test
-    void TestLarge() {
-        assertEquals(fib.number(40), 102334155);
+    void TestLargeRecursive() {
+        assertEquals(102334155, fib.calculate_recursive(40));
+    }
+
+    @Test
+    void TestLargeMemoized() {
+        assertEquals(102334155, fib.calculate_memoized(40));
     }
 
 
